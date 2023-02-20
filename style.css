@@ -124,7 +124,6 @@ margin-left: 5vw;
     text-align: center;
     content: "";
 }
-
 .navigation {
     display: flex;
     flex-direction: row;
@@ -132,6 +131,7 @@ margin-left: 5vw;
     overflow: auto;
     -ms-overflow-style: none;
 }
+
 .navigation__list::-webkit-scrollbar {
     width: 0;
     height: 0;
