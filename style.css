@@ -124,17 +124,17 @@ margin-left: 5vw;
     text-align: center;
     content: "";
 }
+
+.navigation__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 .navigation {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     overflow: auto;
     -ms-overflow-style: none;
-}
-
-.navigation__list::-webkit-scrollbar {
-    width: 0;
-    height: 0;
 }
 .navigation__list{
     display: flex;
