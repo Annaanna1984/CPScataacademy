@@ -35,7 +35,7 @@ body{
     box-shadow: 5px 5px 5px #D9FFF5;
 
 }
-nav{
+.nav{
     width: 100%;
     display: flex;
     align-items: center;
@@ -54,29 +54,21 @@ nav{
 }
 .nav__list {
 
-    /*justify-content: center;*/
     list-style-type: none;
-    /*flex-flow: row wrap;*/
     margin-left: 0;
-    /*align-items: center;*/
 }
-/*.nav__item--style{*/
-/*    appearance: none;*/
-/*    border: 0;*/
-/*    border-radius: 50%;*/
-/*    background: #FF3E79;*/
-/*    padding: 12px 12px;*/
-/*    !*border-radius: 100%;*!*/
-/*    color: #fff;*/
 
-/*}*/
 .nav__item--style{
-    display: inline-block; /* Строчно-блочный элемент */
-    background: #FF3E79; /* Серый цвет фона */
-    padding: 0.6rem 0.7rem; /* Поля вокруг текста */
-    text-decoration: none; /* Убираем подчёркивание */
-    border-radius: 100%; /* Скругляем уголки */
+    display: inline-block;
+    background: #FF3E79;
+    padding: 10px 9px 10px 11px;
+    text-decoration: none;
+    border-radius: 100%;
+    vertical-align: top;
+    width: 43px;
+    height: 43px;
 }
+
 
 .nav__button{
     outline: none;
@@ -324,8 +316,8 @@ margin-top: 5px;
         flex-flow: row wrap;
         margin-top: 60px;
     }
-    .nav{
-
+    .nav__item--style{
+     padding: 10px;
     }
     .nav__item--margin{
         display:flex;
@@ -337,7 +329,8 @@ margin-top: 5px;
     .nav__link{
         /*display:flex;*/
         /*text-align: center;*/
-        width: 42.4px;
+        width: 43px;
+        height: 43px;
     }
     .nav__text{
         display:block;
@@ -369,6 +362,5 @@ margin-top: 5px;
         margin-bottom: 10px;
     }
     .navigation__link{
-
     }
 }
