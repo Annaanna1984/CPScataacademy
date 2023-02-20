@@ -124,14 +124,13 @@ margin-left: 5vw;
     text-align: center;
     content: "";
 }
-.navigation{
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: flex-start;*/
-    /*overflow: auto;*/
-    /*-ms-overflow-style: none;*/
-    /*scrollbar-width: none;*/
-    /*margin-bottom: 80px;*/
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: auto;
+    -ms-overflow-style: none;
 }
 .navigation__list::-webkit-scrollbar {
     width: 0;
