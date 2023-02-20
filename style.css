@@ -77,7 +77,6 @@ body{
     margin-left: 2vw;
     margin-right: 2vw;
 
-    /*background: url("img/content/menu.svg");*/
 }
 .nav__img--burger{
 margin-left: 5vw;
@@ -192,15 +191,12 @@ margin-left: 20px;
     margin-left: 16px;
     margin-bottom: 20px;
 }
-.section__button--figure{
-
-}
 .section__button--img{
 
 }
 .section__button--title{
     font-size: 16px;
-margin-top: 5px;
+    margin-top: 5px;
     margin-left: 16px;
 }
 .section__img{
@@ -359,6 +355,8 @@ margin-top: 5px;
     .navigation__item--margin-bottom{
         margin-bottom: 10px;
     }
-    .navigation__link{
+    .section--style{
+        position: relative;
+        bottom: 40px;
     }
 }
