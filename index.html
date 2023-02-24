@@ -6,62 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="header">
+<body lang="ru">
+<header class="header" >
 
-   <nav class="nav">
-       <button class="nav__button nav__link--position-left nav__item--style" type="button" >
-           <img class="nav__button--img " src="img/content/menu.svg">
-       </button>
+    <button class="button__menu container__divider--m" type="button">
+     <img class="button__menu--img " src="img/content/menu.svg">
+    </button>
 
-       <hr class="container__divider container__divider--active nav__link--position-left">
+    <a class="logo container__divider" href="#" aria-label="Логотип">
+     <img class="nav__logo--img" src="img/content/Group.svg" alt="Логотип" width="98">
+    </a>
 
-       <a class="nav__logo nav__link--position-left" href="#" aria-label="Логотип">
-           <img class="nav__logo--img" src="img/content/Group.svg" alt="Логотип" width="98">
-       </a>
-
-       <hr class="container__divider container__divider--passive">
-
-       <ul class="nav__list">
-          <li class="nav__item nav__item--active">
-            <a class="nav__link nav__item--style" href="#">
-                <img class="nav__img" src="img/content/call.svg">
+    <ul class="upper-menu container__divider--l">
+        <li class="upper-menu__item ">
+            <a class="upper-menu__link " href="#">
+                <img class="upper-menu__img" src="img/content/call.svg">
             </a>
-          </li>
-          <li class="nav__item nav__item--active ">
-            <a class="nav__link nav__item--style" href="#">
-                <img class="nav__img" src="img/content/chat.svg"></a>
-          </li>
-          <li class="nav__item nav__item--active">
-            <a class="nav__link nav__item--style" href="#">
-                <img class="nav__img" src="img/content/profile.svg"></a>
-          </li>
-
-          <hr class="container__divider container__divider--active container__divider--margin">
-
-          <li class="nav__item nav__item--margin ">
-              <span class="nav__text">Оставить заявку</span>
-            <a class="nav__link nav__item--xl nav__item--style" >
-                <img class="nav__img" src="img/content/repair.svg">
-            </a>
-
-          </li>
-          <li class="nav__item nav__item--margin nav__item--style-checkstatus">
-              <span class="nav__text">Статус ремонта</span>
-            <a class="nav__link nav__item--xl nav__item--style" >
-                <img class="nav__img" src="img/content/checkstatus.svg">
-            </a>
-
-          </li>
+        </li>
+        <li class="upper-menu__item ">
+            <a class="upper-menu__link " href="#">
+                <img class="upper-menu__img" src="img/content/chat.svg"></a>
+        </li>
+        <li class="upper-menu__item ">
+            <a class="upper-menu__link" href="#">
+                <img class="upper-menu__img" src="img/content/profile.svg"></a>
+        </li>
     </ul>
-   </nav>
+
+
 </header>
 
     <main class="main">
         <div class="main__div">
-            <div class="main__div--divider"></div>
-            <h1 class="main-title">Услуги и сервисы</h1>
-
+            <h1 class="main-title main__div--divider">Услуги и сервисы</h1>
+            <ul class="user-menu ">
+                <li class="user-menu__item">
+                    <a class="user-menu__link " >
+                        <span class="user-menu__text">Оставить заявку</span>
+                        <span class="user-menu--style"><img class="user-menu__img" src="img/content/repair.svg"></span>
+                    </a>
+                </li>
+                <li class="user-menu__item">
+                    <a class="user-menu__link" >
+                        <span class="user-menu__text">Статус ремонта</span>
+                        <span class="user-menu--style"> <img class="nav__img" src="img/content/checkstatus.svg"></span>
+                    </a>
+                </li>
         </div>
         <nav class="navigation">
             <ul class="navigation__list">
