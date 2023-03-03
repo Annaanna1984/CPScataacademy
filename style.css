@@ -218,7 +218,9 @@ opacity: 0.5;
     margin-left: 18px;
     margin-right: -2px;
 }
-
+.navigation__item:nth-child(6){
+   padding-right: 2px;
+}
 .description{
 
 }
