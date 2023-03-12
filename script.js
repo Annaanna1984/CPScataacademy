@@ -1,6 +1,5 @@
 let swiper = new Swiper(".swiper", {
     slidesPerView: "auto",
-    spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -13,3 +12,13 @@ let swiper = new Swiper(".swiper", {
         }
     }
 });
+
+
+const content = document.querySelector('.brands__list');
+const button = document.querySelector('.read-more');
+button.addEventListener('click', function () {
+    content.classList.toggle('content-height');
+    button.innerHTML = (button.innerHTML === 'Показать все') ? button.innerHTML = 'Скрыть' : button.innerHTML = 'Показать все';
+    button.classList.toggle('read-more--click');
+})
+
