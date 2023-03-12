@@ -1,7 +1,7 @@
 
 @import 'fonts/stylesheet.css';
-@import "block/_brands__list.css";
-@import "block/_cap.css";
+@import "block/brands__list.css";
+@import "block/cap.css";
 
 html{
     box-sizing: border-box;
