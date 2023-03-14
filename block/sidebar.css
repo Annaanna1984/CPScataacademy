@@ -8,10 +8,10 @@
     box-shadow: 16px 0 52px 0 #0E185033;
 }
 
-
 .sidebar__logo{
     margin-left: 17px;
 }
+
 .sidebar__logo:hover{
     opacity: 0.5;
 }
@@ -19,6 +19,7 @@
 .sidebar__footer{
     margin-top: auto;
 }
+
 .sidebar__footer{
     margin-top: auto;
 }

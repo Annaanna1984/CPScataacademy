@@ -1,13 +1,16 @@
 .brands{
     background-color: #F8F8F8;
 }
+
 .brands__list{
     list-style-type: none;
     padding: 0;
 }
+
 .swiper-slide{
     display: flex;
 }
+
 .brands__item{
     display: flex;
     justify-content: space-between;
@@ -19,9 +22,15 @@
     border: 1px solid #EAEAEA;
     border-radius: 6px;
 }
+
+.brands__item:hover{
+    opacity: 0.5;
+}
+
 .brands__image{
 
 }
+
 .brands__arrow{
     display: block;
     position: relative;
@@ -30,6 +39,7 @@
     border: 2px solid #FF3E79;
     border-radius: 50%;
 }
+
 .brands__arrow::after{
     position: absolute;
     top: 13px;
@@ -54,6 +64,7 @@
     line-height: 24px;
     letter-spacing: -0.2px;
 }
+
 .read-more::before{
     position: absolute;
     top: 6px;
@@ -66,6 +77,7 @@
     border-bottom: 2px solid #41F6D7;
     transform: rotate(315deg);
 }
+
 .read-more::after{
     position: absolute;
     top: 11px;
@@ -79,12 +91,10 @@
     transform: rotate(315deg);
 }
 
-.content-height{
-    height: auto;
-}
 .read-more--click::before{
     transform: rotate(137deg);
 }
+
 .read-more--click::after{
     transform: rotate(137deg);
 }
