@@ -1,0 +1,25 @@
+.modal{
+  &__title{
+    margin-top: 32px;
+    @media screen and (max-width: 512px) {
+      position: relative;
+      top: 60px;
+    }
+  }
+  &__form {
+    @media screen and (max-width: 512px) {
+      position: relative;
+      top: 60px;
+    }
+  }
+  &-form__button{
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    width: 130px;
+  }
+}
+.price__btn.modal-form__button::after{
+  top: 12px;
+  left:100px;
+}

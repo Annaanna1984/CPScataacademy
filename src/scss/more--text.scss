@@ -1,0 +1,45 @@
+$var6: #1B1C21;
+$var7: #41F6D7;
+.more--text{
+  display: block;
+  position: relative;
+  left: 57px;
+  bottom: 0;
+  text-decoration: none;
+  color: $var6;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  width: 150px;
+  &::before {
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid $var7;
+    border-bottom: 2px solid $var7;
+    transform: rotate(315deg);
+  }
+  &::after {
+    position: absolute;
+    top: 11px;
+    left: -20px;
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid $var7;
+    border-bottom: 2px solid $var7;
+    transform: rotate(315deg);
+  }
+  &--click::before {
+    transform: rotate(137deg);
+  }
+  &--click::after {
+    transform: rotate(137deg);
+  }
+}
+

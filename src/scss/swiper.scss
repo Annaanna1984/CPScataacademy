@@ -1,0 +1,50 @@
+$var10: #ffffff;
+$var11: #524f4f;
+.swiper {
+  &-slide {
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      background: $var10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 16px;
+      margin-right: 0;
+      max-width: 240px;
+    }
+    img {
+      @media screen and (max-width: 768px) {
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+  &-wrapper {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 66px;
+      padding-left: 0;
+    }
+    @media screen and (min-width:768px) {
+      box-sizing: border-box;
+      width: auto ;
+      transform: translate3d(0px, 0px, 0px)!important ;
+
+    }
+  }
+}
+.swiper-slide {
+  display: flex;
+}
+.swiper-pagination-bullet-active {
+  background: $var11;
+}
+.table__body.swiper-wrapper{
+  @media screen and (min-width: 768px){
+    display: table-row-group;
+  }
+}
+.table.swiper{
+  @media screen and (min-width: 768px) {
+    display: table;
+  }
+}

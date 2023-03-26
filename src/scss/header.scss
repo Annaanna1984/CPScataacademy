@@ -1,0 +1,26 @@
+$var1: #FFFFFF;
+$var2: #D9FFF5;
+
+.header {
+  display: flex;
+  height: 88px;
+  background-color: $var1;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 5px $var2;
+  width: 100%;
+  align-items: center;
+  @media (min-width: 1120px) {
+    display: none;
+  }
+
+  &__logo {
+    margin-right: 2vw;
+    @media (min-width: 510px) and (max-width: 1120px) {
+      margin: 0 10px;
+    }
+    @media (min-width: 510px) and (max-width: 1120px) {
+      margin-left: 0;
+    }
+  }
+}
+

@@ -1,0 +1,56 @@
+$var1: #FFFFFF;
+$var2: #D9FFF5;
+$var3: #FF3E79;
+$var4: #EAEAEA;
+$var5: #F8F8F8;
+$var6: #1B1C21;
+$var7: #41F6D7;
+$var8: #7E7E82;
+$var9: #B8FFEC;
+$var10: #ffffff;
+$var11: #524f4f;
+$var12: #B5B6BC;
+.form{
+  &__input{
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid $var4;
+    width: 90%;
+  }
+  &__text{
+    display: inline-block;
+    padding-left: 22px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    color:$var8;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__link{
+    text-decoration: none;
+    color: $var3;
+  }
+}
+input[type=text]{
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:$var12;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:$var12;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:$var12;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:$var12;
+}

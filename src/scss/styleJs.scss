@@ -1,0 +1,24 @@
+$var1: #FFFFFF;
+.main-overflow-hidden{
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y:hidden
+}
+.main-overflow-auto{
+  overflow: inherit;
+}
+.modal--open{
+  display: block;
+  z-index: 5;
+  position: fixed;
+  background-color: $var1;
+}
+.main--opacity{
+  opacity: 0.2;
+}
+.modal--close{
+  display: none;
+}
+.content-height {
+  height: auto;
+}

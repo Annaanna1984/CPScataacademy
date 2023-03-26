@@ -1,0 +1,62 @@
+$var3: #FF3E79;
+.icon {
+  background: $var3;
+  text-decoration: none;
+  border-radius: 100%;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    opacity: 0.5;
+  }
+  &--close {
+    margin-left: 24px;
+    padding: 10px 10px 10px 11px;
+  }
+  &--search {
+    margin-left: 78px;
+    padding: 10px 10px 10px 11px;
+  }
+  &-contact__list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 24px;
+  }
+  &-contact__link {
+    display: block;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+  &-contact__item {
+    display: inline-block;
+    padding: 10px 10px 10px 11px;
+    &--profile {
+      width: 20px;
+      height: 20px;
+      padding-right: 2px;
+    }
+  }
+}
+.icon--search {
+  display: block;
+  @media screen and (max-width: 360px){
+    display: block;
+    margin-left:auto;
+  }
+}
+.icon--close {
+  @media screen and (max-width: 360px){
+    display: block;
+  }
+}
+.icon--close{
+  @media screen and (min-width: 1120px) {
+    display: none;
+  }
+}
+.icon--search {
+  @media screen and (min-width: 1120px) {
+    margin-left: 130px;
+  }
+}
+

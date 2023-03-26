@@ -1,0 +1,21 @@
+.page{
+  @media screen and (min-width: 1120px) {
+    display: flex;
+  }
+  &__sidebar {
+    display: none;
+    @media screen and (max-width: 1121px) {
+      position: fixed;
+    }
+    @media screen and (min-width: 1121px) {
+      display: block;
+    }
+  }
+  &--main{
+
+  }
+}
+.main--opacity{
+  opacity: 0.2;
+}
+

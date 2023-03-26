@@ -1,0 +1,158 @@
+
+$var1: #FFFFFF;
+$var2: #D9FFF5;
+$var3: #FF3E79;
+$var4: #EAEAEA;
+$var5: #F8F8F8;
+$var6: #1B1C21;
+$var7: #41F6D7;
+$var8: #7E7E82;
+$var9: #B8FFEC;
+$var10: #ffffff;
+$var11: #524f4f;
+$var12: #B5B6BC;
+.price {
+    box-shadow: inset 0 2px 4px $var2;
+    background-color: $var5;
+  &::before{
+    @media screen and (max-width: 768px) {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset -40px 0 40px -4px white;
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+  &__list{
+    list-style-type: none;
+    color: $var6;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 16px;
+    @media screen and (max-width: 768px) {
+    padding-left: 0;
+    }
+    @media screen and (min-width: 768px){
+      padding-top: 63px;
+      margin: 0;
+      display: block;
+    }
+  }
+  &__link{
+    background-color: $var1;
+    border: 1px solid $var4;
+    border-radius: 6px;
+    padding: 23px 16px;
+    @media screen and (min-width: 768px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media screen and (max-width:768px ){
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+
+      position: relative;
+      width: 206px;
+      height: 142px;
+      flex-flow: column;
+      align-items: flex-start;
+      padding-top: 36px;
+      padding-bottom: 20px;
+    }
+
+  }
+  &__service{
+    @media screen and (min-width: 768px){
+      width: 350px;
+    }
+    @media screen and (max-width: 768px) {
+      position: relative;
+      min-width: 240px;
+      height: 36px;
+    }
+    &::before{
+      @media screen and (max-width: 768px) {
+        content: 'Ремонтные услуги';
+        font-size: 14px;
+        line-height: 16px;
+        color: $var8;
+        opacity: 0.72;
+        position: absolute;
+        bottom: 40px;
+      }
+    }
+  }
+  &__prices{
+    @media screen and (max-width: 768px) {
+      position: relative;
+    }
+    &::before{
+      @media screen and (max-width: 768px) {
+        content: 'Цена';
+        font-size: 14px;
+        line-height: 16px;
+        color: $var8;
+        opacity: 0.72;
+        position: absolute;
+        bottom: 24px;
+      }
+    }
+  }
+  &__time{
+    @media screen and (max-width: 768px) {
+      position: relative;
+    }
+    @media screen and (min-width: 768px){
+      width: 81px;
+    }
+    &::before{
+      @media screen and (max-width: 768px) {
+        content: 'Срок';
+        font-size: 14px;
+        line-height: 16px;
+        color: $var8;
+        opacity: 0.72;
+        position: absolute;
+        bottom: 24px;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    background-color: $var3;
+    text-decoration: none;
+    border-radius: 16px;
+    vertical-align: top;
+    color: $var1;
+    padding: 7px 27px 7px 12px;
+    @media screen and (max-width:768px ){
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+    &::after{
+      position: absolute;
+      top: 12px;
+      left: 80px;
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-left: 2px solid $var1;
+      border-bottom: 2px solid $var1;
+      transform: rotate(225deg);
+
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+

@@ -1,0 +1,49 @@
+
+$var1: #FFFFFF;
+$var2: #D9FFF5;
+$var3: #FF3E79;
+$var4: #EAEAEA;
+$var5: #F8F8F8;
+$var6: #1B1C21;
+$var7: #41F6D7;
+$var8: #7E7E82;
+$var9: #B8FFEC;
+$var10: #ffffff;
+$var11: #524f4f;
+$var12: #B5B6BC;
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+//@font-face {
+//  font-family: 'TT Lakes';
+//  src: url('../fonts/TTLakes-Italic.eot');
+//  src: local('TT Lakes Italic'), local('TTLakes-Italic');
+//  font-weight: normal;
+//  font-style: italic;
+//}
+//@font-face {
+//  font-family: 'TT Lakes';
+//  src: url('../fonts/TTLakes-Regular.ttf');
+//  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+//  url('../fonts/TTLakes-Regular.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+@font-face {
+  font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes-Italic.eot') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: TT Lakes,'Arial', sans-serif;
+  width: 100%;
+}
