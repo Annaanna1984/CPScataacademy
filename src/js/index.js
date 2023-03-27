@@ -105,10 +105,10 @@ function sidebarClose() {
 function sidebarCloseClickOutside(e) {
   if(sideBar.classList.contains('modal--open') && !e.target.matches('.page__sidebar, .page__sidebar *')) {
     sidebarClose();
-    console.log(1)
   }
 }
 document.addEventListener('touchstart', sidebarCloseClickOutside);
+
 
 const iconClose = document.querySelector('.icon--close');
 iconClose.addEventListener('click', sidebarClose)
@@ -135,13 +135,12 @@ function feedbackClose() {
   pageMain.classList.add('main-overflow-auto');
 }
 
-function feedbackCloseClickOutside(e) {
+function feedbackCloseTouchOutside(e) {
   if(feedback.classList.contains('modal--open') && !e.target.matches('.feedback, .feedback *')) {
     feedbackClose();
   }
 }
-document.addEventListener('touchstart', feedbackCloseClickOutside);
-
+document.addEventListener('touchstart', feedbackCloseTouchOutside);
 btnClose.addEventListener('click', feedbackClose)
 
 
@@ -154,6 +153,9 @@ buttonCall.addEventListener('click', function (){
   pageMain.classList.add('main-overflow-hidden');
   sideBar.classList.remove('modal--open');
   pageMain.classList.remove('main-overflow-auto');
+  if (SidebarIconFeedback.classList.contains('modal--open')){
+    document.querySelector(".icon-feedback").disabled = true;
+  }
 })
 
 function callClose() {
@@ -164,12 +166,14 @@ function callClose() {
   pageMain.classList.add('main-overflow-auto');
 }
 
-function callCloseClickOutside(e) {
+function callCloseTouchOutside(e) {
   if(call.classList.contains('modal--open') && !e.target.matches('.call, .call *')) {
     callClose();
   }
 }
-document.addEventListener('touchstart', callCloseClickOutside);
+document.addEventListener('touchstart', callCloseTouchOutside);
+
+
 
 const callIconClose = document.querySelector('.call__icon--close')
 callIconClose.addEventListener('click', callClose)
@@ -179,6 +183,7 @@ callIconClose.addEventListener('click', callClose)
 
 const SidebarIconCall = document.querySelector('.sidebar__icon-call');
 SidebarIconCall.addEventListener('click', function (){
+  feedback.classList.remove('modal--open');
   call.classList.add('modal--open');
   pageMain.classList.add('main--opacity');
   sideBar.classList.add('main--opacity');
@@ -186,12 +191,24 @@ SidebarIconCall.addEventListener('click', function (){
   pageMain.classList.remove('main-overflow-auto');
   sideBar.classList.remove('modal--open');
 })
+
 const SidebarIconFeedback = document.querySelector('.sidebar__icon-feedback');
 SidebarIconFeedback.addEventListener('click', function (){
-  feedback.classList.add('modal--open');
-  pageMain.classList.add('main--opacity');
-  sideBar.classList.add('main--opacity');
-  pageMain.classList.add('main-overflow-hidden');
-  pageMain.classList.remove('main-overflow-auto');
-  sideBar.classList.remove('modal--open');
+    call.classList.remove('modal--open');
+    feedback.classList.add('modal--open');
+    pageMain.classList.add('main--opacity');
+    sideBar.classList.add('main--opacity');
+    pageMain.classList.add('main-overflow-hidden');
+    pageMain.classList.remove('main-overflow-auto');
+    sideBar.classList.remove('modal--open');
 })
+function SidebarIconFeedbackClickOutside(e){
+  if(!e.composedPath().includes(SidebarIconFeedback) && !e.composedPath().includes(SidebarIconCall)
+      && !e.composedPath().includes(buttonCall) && !e.composedPath().includes(buttonFeedback)
+      && !e.composedPath().includes(buttonMenu)){
+    callClose();
+    feedback.classList.remove('modal--open');
+    call.classList.remove('modal--open');
+  }
+}
+document.addEventListener('click', SidebarIconFeedbackClickOutside);
