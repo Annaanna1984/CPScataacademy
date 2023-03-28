@@ -1004,7 +1004,7 @@ html {
 
 @font-face {
   font-family: 'TT Lakes';
-  src: url(./fonts/TTLakes-Italic.eot) format("truetype");
+  src: url(./fonts/TTLakes-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: italic; }
 
