@@ -2,7 +2,7 @@ $var10: #ffffff;
 $var11: #524f4f;
 .swiper {
   &-slide {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       font-size: 18px;
       background: $var10;
       display: flex;
@@ -13,14 +13,14 @@ $var11: #524f4f;
       max-width: 240px;
     }
     img {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         display: block;
         object-fit: cover;
       }
     }
   }
   &-wrapper {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 66px;
       padding-left: 0;
     }

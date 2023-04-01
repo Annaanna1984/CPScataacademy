@@ -14,6 +14,10 @@ $var3: #FF3E79;
     order: 999;
     margin-left: 0;
   }
+  @media (min-width: 1440px) {
+    position: relative;
+    margin-left: auto;
+  }
   &__item {
     display: inline;
     margin-right: 4vw;
@@ -51,14 +55,6 @@ $var3: #FF3E79;
       margin-right: 10px;
     }
   }
-}
-.user-menu {
-  order: 999;
-  padding-left: 30px;
-}
-.user-menu {
-  order: 999;
-  margin-left: 0;
 }
 > *:not(.user-menu) {
   @media (min-width: 1120px) {

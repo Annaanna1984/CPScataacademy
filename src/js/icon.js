@@ -119,3 +119,14 @@ function modalClickOutside(e){
     }
 }
 document.addEventListener('click', modalClickOutside);
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        feedback.classList.remove('modal--open');
+        call.classList.remove('modal--open');
+        sideBar.classList.remove('modal--open');
+        pageMain.classList.remove('main-overflow-hidden');
+        pageMain.classList.remove('main--opacity');
+        sideBar.classList.remove('main--opacity');
+    }
+});

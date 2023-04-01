@@ -3,9 +3,9 @@
   position: relative;
   bottom: 480px;
   @media screen and (min-width: 512px) {
-    position: relative;
-    bottom: 465px;
-    right: 85px;
+    position: fixed;
+    top: 30px;
+    right: 470px;
     display: block;
   }
 }

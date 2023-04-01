@@ -1,13 +1,15 @@
     const content = document.querySelector('.brands__list');
     const button = document.querySelector('.read-more');
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function (evt) {
+        evt.preventDefault();
         content.classList.toggle('content-height');
         button.innerHTML = (button.innerHTML === 'Показать все') ? button.innerHTML = 'Скрыть' : button.innerHTML = 'Показать все';
         button.classList.toggle('read-more--click');
     })
     const blockContent = document.querySelector('.technique__list');
     const buttonBlockContent = document.querySelector('.more-block');
-    buttonBlockContent.addEventListener('click', function (){
+    buttonBlockContent.addEventListener('click', function (evt){
+        evt.preventDefault();
         blockContent.classList.toggle('content-height');
         buttonBlockContent.innerHTML = buttonBlockContent.innerHTML === 'Скрыть' ? 'Показать все': 'Скрыть';
         buttonBlockContent.classList.toggle('read-more--click');
@@ -18,7 +20,8 @@
     const buttonTextContent = document.querySelector('.more--text');
     const descriptionTextNext = document.querySelector('.description__text--next');
     const descriptionTextFull = document.querySelector('.description__text--full');
-    buttonTextContent.addEventListener('click', function (){
+    buttonTextContent.addEventListener('click', function (evt){
+        evt.preventDefault();
         textContent.classList.toggle('description__text--more');
         descriptionTextNext.classList.toggle('description__text--more');
         descriptionTextFull.classList.toggle('description__text--more');

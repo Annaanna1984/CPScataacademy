@@ -7,7 +7,7 @@ $var5: #F8F8F8;
   box-shadow: inset 0 2px 4px $var2;
   background-color: $var5;
   &::before{
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       content: '';
       position: absolute;
       width: 100%;
@@ -24,7 +24,7 @@ $var5: #F8F8F8;
     @media screen and (max-width: 767px){
       padding-left: 0;
     }
-    @media screen and (min-width: 767px){
+    @media screen and (min-width: 768px){
       display: flex;
       flex-wrap: wrap;
       gap: 2vw;
@@ -53,10 +53,15 @@ $var5: #F8F8F8;
     @media screen and (min-width: 1285px) {
       flex: 0 1 22.9%;
     }
-    @media screen and (min-width: 1575px) {
-      flex: 0 1 17.9%;
+    @media screen and (min-width: 1440px) {
+      flex: 0 1 22.8%;
     }
-
+    @media screen and (min-width: 1591px) {
+      flex: 0 1 22.5%;
+    }
+    @media screen and (min-width: 1808px) {
+      flex: 0 1 22.3%;
+    }
 
     &--arrow{
       margin-top: 104px;
