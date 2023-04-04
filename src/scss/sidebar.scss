@@ -4,6 +4,7 @@ $var1: #FFFFFF;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-height: 800px;
   left: 0;
   box-shadow: 16px 0 52px 0 #0E185033;
   @media screen and (max-width: 360px){

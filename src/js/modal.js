@@ -7,14 +7,12 @@ buttonMenu.addEventListener('click', function (){
     pageMain.classList.add('main-overflow-hidden');
     pageMain.classList.remove('main-overflow-auto');
 })
-
 function sidebarClose() {
     sideBar.classList.remove('modal--open');
     pageMain.classList.remove('main--opacity');
     pageMain.classList.remove('main-overflow-hidden');
     pageMain.classList.add('main-overflow-auto');
 }
-
 function sidebarCloseClickOutside(e) {
     if(sideBar.classList.contains('modal--open') && !e.target.matches('.page__sidebar, .page__sidebar *')) {
         sidebarClose();
@@ -23,6 +21,8 @@ function sidebarCloseClickOutside(e) {
 document.addEventListener('touchstart', sidebarCloseClickOutside);
 const iconClose = document.querySelector('.icon--close');
 iconClose.addEventListener('click', sidebarClose)
+
+
 const buttonFeedback = document.querySelector('.icon-feedback');
 const feedback = document.querySelector('.feedback');
 const btnClose = document.querySelector('.btn--close');
@@ -34,9 +34,6 @@ buttonFeedback.addEventListener('click', function (){
     sideBar.classList.remove('modal--open');
     pageMain.classList.remove('main-overflow-auto');
 })
-
-
-
 function feedbackClose() {
     feedback.classList.remove('modal--open');
     pageMain.classList.remove('main--opacity');
@@ -44,7 +41,6 @@ function feedbackClose() {
     pageMain.classList.remove('main-overflow-hidden');
     pageMain.classList.add('main-overflow-auto');
 }
-
 function feedbackCloseTouchOutside(e) {
     if(feedback.classList.contains('modal--open') && !e.target.matches('.feedback, .feedback *')) {
         feedbackClose();
@@ -52,6 +48,7 @@ function feedbackCloseTouchOutside(e) {
 }
 document.addEventListener('touchstart', feedbackCloseTouchOutside);
 btnClose.addEventListener('click', feedbackClose)
+
 
 const buttonCall = document.querySelector('.icon-call');
 const call = document.querySelector('.call');
@@ -66,7 +63,6 @@ buttonCall.addEventListener('click', function (){
         document.querySelector(".icon-feedback").disabled = true;
     }
 })
-
 function callClose() {
     call.classList.remove('modal--open');
     pageMain.classList.remove('main--opacity');
@@ -74,14 +70,12 @@ function callClose() {
     pageMain.classList.remove('main-overflow-hidden');
     pageMain.classList.add('main-overflow-auto');
 }
-
 function callCloseTouchOutside(e) {
     if(call.classList.contains('modal--open') && !e.target.matches('.call, .call *')) {
         callClose();
     }
 }
 document.addEventListener('touchstart', callCloseTouchOutside);
-
 
 
 const callIconClose = document.querySelector('.call__icon--close')
@@ -108,6 +102,7 @@ SidebarIconCall.addEventListener('click', function (){
     pageMain.classList.remove('main-overflow-auto');
     sideBar.classList.remove('modal--open');
 })
+
 function modalClickOutside(e){
     if(!e.composedPath().includes(SidebarIconFeedback) && !e.composedPath().includes(SidebarIconCall)
         && !e.composedPath().includes(buttonCall) && !e.composedPath().includes(buttonFeedback)
