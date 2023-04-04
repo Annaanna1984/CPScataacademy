@@ -10,9 +10,9 @@ $var1: #FFFFFF;
     max-width: 100vw;
   }
   @media screen and (min-width: 1120px){
-    display: flex;
     flex-direction: column;
     position: relative;
+    display: flex;
     box-shadow: none;
     width: 308px;
   }
