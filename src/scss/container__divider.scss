@@ -1,6 +1,6 @@
 $var4: #EAEAEA;
 
-.container__divider::after {
+.container-divider::after {
   display: inline-flex;
   position: relative;
   bottom: 5px;
@@ -11,36 +11,36 @@ $var4: #EAEAEA;
   text-align: center;
   content: "";
   border: 1px solid $var4;
-  @media screen and (min-width: 512px){
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
-.container__divider--m::after {
+
+.container-divider-m::after {
   display: inline-flex;
   position: relative;
-  bottom: 25px;
-  left: 35px ;
+  bottom: 6px;
+  left: 35px;
   width: 2px;
   height: 30px;
   text-align: center;
   content: "";
   border: 1px solid $var4;
-  @media screen and (max-width: 512px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
-.container__divider--l::after {
+
+.container-divider-l::after {
   display: inline-block;
   position: relative;
   top: 8px;
-  left: 30px;
   width: 2px;
   height: 30px;
-  left: 12px;
   text-align: center;
   content: "";
   border: 1px solid $var4;
-  @media screen and (max-width: 512px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }

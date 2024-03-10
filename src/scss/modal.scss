@@ -1,25 +1,42 @@
-.modal{
-  &__title{
+$var7: #41F6D7;
+.modal {
+  &__title {
     margin-top: 32px;
     @media screen and (max-width: 512px) {
       position: relative;
       top: 60px;
     }
+
+    &--divider::before {
+      display: inline-block;
+      position: relative;
+      top: 7px;
+      right: 20px;
+      width: 2px;
+      height: 30px;
+      text-align: center;
+      content: "";
+      border: 2px solid $var7;
+    }
   }
+
   &__form {
     @media screen and (max-width: 512px) {
       position: relative;
       top: 60px;
     }
   }
-  &-form__button{
+
+  &__form--button {
     display: block;
     margin-left: auto;
     margin-right: 20px;
     width: 130px;
   }
+
 }
-.price__btn.modal-form__button::after{
+
+.price__btn.modal__form--button::after {
   top: 12px;
-  left:100px;
+  left: 100px;
 }

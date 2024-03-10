@@ -4,11 +4,10 @@ $var2: #D9FFF5;
 .header {
   display: flex;
   height: 88px;
-  background-color: $var1;
-  margin-bottom: 5px;
-  box-shadow: 5px 5px 5px $var2;
+  background-color: #FFFFFF;
   width: 100%;
   align-items: center;
+  outline: 5px dotted #D9FFF5;
   @media (min-width: 1120px) {
     display: none;
   }
@@ -21,6 +20,21 @@ $var2: #D9FFF5;
     @media (min-width: 510px) and (max-width: 1120px) {
       margin-left: 0;
     }
+  }
+
+  &__button-menu {
+    outline: none;
+    border: 0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    display: block;
+    background: #FF3E79;
+    padding: 10px 9px 10px 11px;
+    text-decoration: none;
+    border-radius: 100%;
+    vertical-align: top;
+    width: 43px;
+    height: 43px;
   }
 }
 

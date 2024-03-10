@@ -1,15 +1,27 @@
 $var1: #FFFFFF;
-.call{
+.call {
   display: none;
   position: fixed;
   z-index: 10;
-  top:0;
+  top: 0;
   right: 0;
   background-color: $var1;
   max-width: 440px;
   min-height: 100vh;
   box-shadow: -16px 0 52px 0 #0e185033;
+
+  &__icon--close {
+    background-image: url("/src/img/close.svg");
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    background: #FF3E79;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-.call>.btn--close{
+
+.call > .btn-close {
   bottom: 245px;
 }

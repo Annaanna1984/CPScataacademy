@@ -1,9 +1,9 @@
 $var6: #1B1C21;
 $var7: #41F6D7;
-.more--text{
+.more-text {
   display: block;
   position: relative;
-  left: 57px;
+  left: 30px;
   bottom: 0;
   text-decoration: none;
   color: $var6;
@@ -11,10 +11,15 @@ $var7: #41F6D7;
   line-height: 24px;
   letter-spacing: -0.2px;
   width: 150px;
+  border: none;
+  padding-right: 20px;
+  padding-left: 0;
+  background-color: transparent;
+
   &::before {
     position: absolute;
     top: 6px;
-    left: -20px;
+    left: -5px;
     content: '';
     display: block;
     width: 5px;
@@ -26,7 +31,7 @@ $var7: #41F6D7;
   &::after {
     position: absolute;
     top: 11px;
-    left: -20px;
+    left: -5px;
     content: '';
     display: block;
     width: 5px;

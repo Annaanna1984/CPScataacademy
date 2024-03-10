@@ -1,6 +1,6 @@
 $var1: #FFFFFF;
 $var3: #FF3E79;
-.order--btn{
+.order-btn {
   position: relative;
   background-color: $var3;
   text-decoration: none;
@@ -9,7 +9,7 @@ $var3: #FF3E79;
   color: $var1;
   padding: 4px 40px 4px 12px;
 
-  &::after{
+  &::after {
     position: absolute;
     top: 12px;
     left: 105px;

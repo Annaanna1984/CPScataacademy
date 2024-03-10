@@ -9,19 +9,16 @@
   </head>
   <body>
   <div class="page">
-<!--    <div class="page__sidebar">-->
       <aside class="page__sidebar sidebar">
         <header class="sidebar__header">
-          <a href="#" class="icon icon--close">
-            <img src="img/close.svg" alt="close">
+          <a href='#' class='icon icon-close icon--close'>
           </a>
 
           <a class="logo sidebar__logo" href="#" aria-label="Логотип">
             <img class="logo--img" src="img/Group.svg" alt="Логотип" width="98">
           </a>
 
-          <a href="#" class="icon icon--search">
-            <img src="img/search.svg" alt="search">
+          <a href='#' class='icon icon-search icon--search'>
           </a>
         </header>
 
@@ -62,83 +59,80 @@
                 Наши сервисные центры
               </a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">
+            <li class='nav__item'>
+              <a href='#' class='nav__link'>
                 Контакты
               </a>
             </li>
           </ul>
         </nav>
 
-        <footer class="sidebar__footer">
-          <ul class="icon-contact__list">
-            <li class="icon-contact__link sidebar__icon-call">
-              <a href="#" class="icon-contact__item icon">
-                <img src="img/call.svg" alt="call">
-              </a>
+        <footer class='sidebar__footer'>
+          <ul class='icon-contact'>
+            <li class='icon-contact__link'>
+              <button class='icon-contact__item icon icon-phone icon-call'>
+              </button>
             </li>
-            <li class="icon-contact__link sidebar__icon-feedback">
-              <a href="#" class="icon-contact__item icon">
-                <img src="img/chat.svg" alt="chat">
-              </a>
+            <li class='icon-contact__link'>
+              <button class='icon-contact__item icon icon-feedback icon-chat'>
+              </button>
             </li>
-            <li class="icon-contact__link">
-              <a href="#" class="icon-contact__item icon">
-                <img class="icon-contact__item--profile" src="img/profile.svg" alt="profile">
+            <li class='icon-contact__link'>
+              <a href='#' class='icon-contact__item icon icon-account'>
               </a>
             </li>
           </ul>
 
-          <a href="mailto:mail@cps.com" class="email-link">mail@cps.com</a>
-          <a href="tel:8 800 890 8900" class="phone-link">8 800 890 8900</a>
-          <ul class="lang">
-            <li class="lang__link"><a href="#" class="lang__item">RU</a></li>
-            <li class="lang__link"><a href="#" class="lang__item">EN</a></li>
-            <li class="lang__link"><a href="#" class="lang__item">CH</a></li>
+          <a href='mailto:mail@cps.com' class='email-link'>mail@cps.com</a>
+          <a href='tel:8 800 890 8900' class='phone-link'>8 800 890 8900</a>
+          <ul class='lang lang--position'>
+            <li class='lang__link'><a href='#' class='lang__item'>RU</a></li>
+            <li class='lang__link'><a href='#' class='lang__item'>EN</a></li>
+            <li class='lang__link'><a href='#' class='lang__item'>CH</a></li>
           </ul>
         </footer>
       </aside>
 
     <div class="page--main">
-      <header class="header" >
-      <button class="button--menu container__divider--m" type="button">
-        <img class="button--menu-img " src="./img/menu.svg">
-      </button>
+      <header class='header'>
+        <button class='header__button-menu container-divider-m icon icon-menu' type='button'>
+        </button>
 
-      <a class="logo header__logo container__divider" href="#" aria-label="Логотип">
-        <img class="logo--img" src="./img/Group.svg" alt="Логотип" width="98">
-      </a>
+        <a class='logo header__logo container-divider' href='#' aria-label='Логотип'>
+          <img class='logo--img' src='./img/Group.svg' alt='Логотип' width='98'>
+        </a>
 
-      <ul class="upper-menu container__divider--l">
-        <li class="upper-menu__item ">
-          <a class="icon upper-menu__link icon-call" href="#">
-            <img class="upper-menu__img upper-menu__img--call" src="./img/call.svg">
-          </a>
-        </li>
-        <li class="upper-menu__item icon-feedback">
-          <a class="upper-menu__link " href="#">
-            <img class="upper-menu__img upper-menu__img--chat" src="./img/chat.svg"></a>
-        </li>
-        <li class="upper-menu__item ">
-          <a class="upper-menu__link" href="#">
-            <img class="upper-menu__img" src="./img/profile.svg"></a>
-        </li>
-      </ul>
-    </header>
+        <ul class='upper-menu container-divider-l'>
+          <li class='upper-menu__item '>
+            <button class='icon upper-menu__link icon-call'>
+            </button>
+          </li>
+          <li class='upper-menu__item '>
+            <button class='upper-menu__link icon icon-chat'>
+            </button>
+          </li>
+          <li class='upper-menu__item '>
+            <button class='upper-menu__link icon icon-profile'>
+            </button>
+          </li>
+        </ul>
+      </header>
     <main class="main">
       <div class="main__div">
         <h1 class="main-title main__div--divider">Услуги и сервисы</h1>
         <ul class="user-menu ">
-          <li class="user-menu__item">
-            <a class="user-menu__link " >
-              <span class="user-menu__text">Оставить заявку</span>
-              <span class="user-menu--style"><img class="user-menu__img" src="img/repair.svg"></span>
+          <li class='user-menu__item'>
+            <a class='user-menu__link user-menu--style'>
+              <span class='user-menu__text'>Оставить заявку</span>
+              <span class='icon icon-user-menu'>
+                        </span>
             </a>
           </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link" >
-              <span class="user-menu__text">Статус ремонта</span>
-              <span class="user-menu--style"> <img class="user-menu__img" width="20px" height="20px" src="img/checkstatus.svg"></span>
+          <li class='user-menu__item'>
+            <a class='user-menu__link user-menu--style'>
+              <span class='user-menu__text'>Статус ремонта</span>
+              <span class='icon icon-checkstatus'>
+                        </span>
             </a>
           </li>
         </ul>
@@ -171,15 +165,13 @@
             Мы являемся авторизованным сервисным центром по ремонту техники Dell.
             Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
           </p>
-          <a class="more--text" href="#" > Читать далее </a>
+          <button class='more-text'> Читать далее</button>
         </div>
         <img class="description__img" src="img/Picture%20Copy.jpg" alt="фото нашей вывески" >
-
       </section>
-
     </main>
     <section class="brands swiper">
-      <h3 class="section__title"> Ремонт техники различных брендов</h3>
+      <h3 class='section-title section-title--position'> Ремонт техники различных брендов</h3>
       <ul class="brands__list swiper-wrapper">
         <li class="brands__item swiper-slide">
           <img class="brands__image" src="img/lenovo.png" alt="Lenovo" width="108" height="32">
@@ -198,7 +190,7 @@
           <a class="brands__arrow" href="#"></a>
         </li>
         <li class="brands__item swiper-slide">
-          <img class="brands__image" src="img/bosch.png" alt="Bosch" width="128" height="29">
+          <img class='brands__image' src='img/bosch.png' alt='Bosch' width='128' height='30'>
           <a class="brands__arrow" href="#"></a>
         </li>
         <li class="brands__item swiper-slide">
@@ -210,7 +202,7 @@
           <a class="brands__arrow" href="#"></a>
         </li>
         <li class="brands__item swiper-slide">
-          <img class="brands__image" src="img/sony.png" alt="Sony" width="128" height="27">
+          <img class='brands__image' src='img/sony.png' alt='Sony' width='128' height='26'>
           <a class="brands__arrow" href="#"></a>
         </li>
         <li class="brands__item swiper-slide">
@@ -227,11 +219,11 @@
         </li>
       </ul>
       <div class="swiper-pagination"></div>
-      <a class="read-more" href="#" >Показать все</a>
+      <button class='read-more'>Показать все</button>
     </section>
 
     <section class="technique swiper">
-      <h3 class="section__title"> Ремонт различных видов техники</h3>
+      <h3 class='section-title'> Ремонт различных видов техники</h3>
       <ul class="technique__list swiper-wrapper">
         <li class="technique__item swiper-slide">
           <h4 class="technique__title">Ремонт ноутбуков</h4>
@@ -270,23 +262,23 @@
       <a class="read-more more-block" href="#" >Показать все</a>
     </section>
     <section class="price swiper">
-      <h3 class="section__title">Цены на услуги</h3>
-      <ul class="price__list swiper-wrapper">
-        <li class="price__link swiper-slide">
-          <span class="price__service service--title">Диагностика</span>
-          <span class="price__prices prices--title">Бесплатно</span>
-          <span class="price__time time--title">30 мин</span>
-          <a class="price__btn" href="#">Заказать</a>
+      <h3 class='section-title'>Цены на услуги</h3>
+      <ul class='price__list swiper-wrapper'>
+        <li class='price__link swiper-slide'>
+          <span class='price__service service service--title'>Диагностика</span>
+          <span class='price__prices prices prices--title'>Бесплатно</span>
+          <span class='price__time time time--title'>30 мин</span>
+          <a class='price__btn' href='#'>Заказать</a>
         </li>
-        <li class="price__link swiper-slide">
-          <span class="price__service">Замена дисплея</span>
-          <span class="price__prices">1 000 ₽</span>
-          <span class="price__time">30-120 мин</span>
-          <a class="price__btn" href="#">Заказать</a>
+        <li class='price__link swiper-slide'>
+          <span class='price__service'>Замена дисплея</span>
+          <span class='price__prices'>1 000 ₽</span>
+          <span class='price__time'>30-120 мин</span>
+          <a class='price__btn' href='#'>Заказать</a>
         </li>
-        <li class="price__link swiper-slide">
-          <span class="price__service">Замена полифонического динамика</span>
-          <span class="price__prices">1 000 ₽</span>
+        <li class='price__link swiper-slide'>
+          <span class='price__service'>Замена полифонического динамика</span>
+          <span class='price__prices'>1 000 ₽</span>
           <span class="price__time">30-120 мин</span>
           <a class="price__btn" href="#">Заказать</a>
         </li>
@@ -312,50 +304,59 @@
       </p>
       <a class="price-policy__link" href="#">Получить коммерческое предложение</a>
     </section>
-    </main>
-    <footer class="footer">
-      <p class="copyright">
-        © 2019 CPS
-        <br>
-        Разработано командой Apesong
-      </p>
-      <a class="privacy-policy" href="#">Политика конфиденциальности</a>
-      <p class="public-rules">
-        Информация, размещенная на данной странице, не является публичной офертой
-      </p>
-    </footer>
+      <footer class='footer'>
+        <p class='copyright'>
+          © 2019 CPS
+          <br>
+          Разработано командой Apesong
+        </p>
+        <a class='privacy-policy' href='#'>Политика конфиденциальности</a>
+        <p class='public-rules'>
+          Информация, размещенная на данной странице, не является публичной офертой
+        </p>
+      </footer>
     </div>
   </div>
-  <section class="feedback">
-    <h2 class="modal__title main-title main__div--divider">Обратная связь</h2>
-    <form class="form modal__form" action="http://echo.htmlacademy.ru">
-      <input class="form__input" name="feedback-name" type="text" placeholder="Имя">
-      <input class="form__input" name="feedback-telephone" type="tel" placeholder="Телефон">
-      <input class="form__input" name="feedback-email" type="email" placeholder="Электронная почта">
-      <textarea class="form__input" name="feedback-message" placeholder="Сообщение"></textarea>
-      <p class="form__text">
-        Нажимая “отправить”, вы даете согласие на <a class="form__link" href="#">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="#">политикой конфиденциальности</a>
+  <section class='feedback modal'>
+    <h2 class='modal__title main-title modal__title--divider'>Обратная связь</h2>
+    <form class='form modal__form' action='http://echo.htmlacademy.ru'>
+      <label>
+        <input class='form__input' name='feedback-name' type='text' placeholder='Имя'>
+      </label>
+      <label>
+        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'>
+      </label>
+      <label>
+        <input class='form__input' name='feedback-email' type='email' placeholder='Электронная почта'>
+      </label>
+      <label>
+        <textarea class='form__input' name='feedback-message' placeholder='Сообщение'></textarea>
+      </label>
+      <p class='form__text'>
+        Нажимая “отправить”, вы даете согласие на <a class='form__link' href='#'>обработку персональных данных</a> и
+        соглашаетесь с нашей <a class='form__link' href='#'>политикой конфиденциальности</a>
       </p>
-      <a class="order--btn modal-form__button" type="submit">Отправить</a>
+      <a class='order-btn modal__form--button' type='submit'>Отправить</a>
     </form>
-    <button class="btn--close icon icon--close" type="button">
-      <img src="img/close.svg" alt="close">
+    <button class='btn-close icon icon--close feedback__icon--close' type='button'>
     </button>
   </section>
-  <section class="call">
-    <h2 class="modal__title main-title main__div--divider">Заказать звонок </h2>
-    <form class="form modal__form" action="http://echo.htmlacademy.ru">
-      <input class="form__input" name="feedback-telephone" type="tel" placeholder="Телефон">
-      <p class="form__text">
-        Нажимая “отправить”, вы даете согласие на <a class="form__link" href="#">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="#">политикой конфиденциальности</a>
+  <section class='call modal'>
+    <h2 class='modal__title main-title modal__title--divider'>Заказать звонок </h2>
+    <form class='form modal__form' action='http://echo.htmlacademy.ru'>
+      <label>
+        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'>
+      </label>
+      <p class='form__text'>
+        Нажимая “отправить”, вы даете согласие на <a class='form__link' href='#'>обработку персональных данных</a> и
+        соглашаетесь с нашей <a class='form__link' href='#'>политикой конфиденциальности</a>
       </p>
-      <a class="order--btn modal-form__button" type="submit">Отправить</a>
+      <a class='order-btn modal__form--button' type='submit'>Отправить</a>
     </form>
-    <button class="btn--close icon icon--close call__icon--close" type="button">
-      <img src="img/close.svg" alt="close">
+    <button class='btn-close icon icon--close call__icon--close' type='button'>
     </button>
   </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
   </body>
 </html>

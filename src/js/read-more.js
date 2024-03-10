@@ -1,30 +1,38 @@
-    const content = document.querySelector('.brands__list');
-    const button = document.querySelector('.read-more');
-    button.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        content.classList.toggle('content-height');
-        button.innerHTML = (button.innerHTML === 'Показать все') ? button.innerHTML = 'Скрыть' : button.innerHTML = 'Показать все';
-        button.classList.toggle('read-more--click');
-    })
-    const blockContent = document.querySelector('.technique__list');
-    const buttonBlockContent = document.querySelector('.more-block');
-    buttonBlockContent.addEventListener('click', function (evt){
-        evt.preventDefault();
-        blockContent.classList.toggle('content-height');
-        buttonBlockContent.innerHTML = buttonBlockContent.innerHTML === 'Скрыть' ? 'Показать все': 'Скрыть';
-        buttonBlockContent.classList.toggle('read-more--click');
-    })
+const content = document.querySelector('.brands__list')
+const button = document.querySelector('.read-more')
+const blockContent = document.querySelector('.technique__list')
+const buttonBlockContent = document.querySelector('.more-block')
+const textContent = document.querySelector('.description__text--open')
+const buttonTextContent = document.querySelector('.more-text')
+const descriptionTextNext = document.querySelector('.description__text--next')
+const descriptionTextFull = document.querySelector('.description__text--full')
+
+function toggleClass(toggleClass, ...elementArr) {
+  elementArr.forEach(e => e.classList.toggle(toggleClass))
+}
+
+button.addEventListener('click', function(event) {
+  event.preventDefault()
+  const hasClass = content.matches('.content-height')
+  toggleClass('content-height', content)
+  button.textContent = hasClass ? 'Показать всё' : 'Скрыть'
+  toggleClass('read-more--click', button)
+})
 
 
-    const textContent = document.querySelector('.description__text--open');
-    const buttonTextContent = document.querySelector('.more--text');
-    const descriptionTextNext = document.querySelector('.description__text--next');
-    const descriptionTextFull = document.querySelector('.description__text--full');
-    buttonTextContent.addEventListener('click', function (evt){
-        evt.preventDefault();
-        textContent.classList.toggle('description__text--more');
-        descriptionTextNext.classList.toggle('description__text--more');
-        descriptionTextFull.classList.toggle('description__text--more');
-        buttonTextContent.innerHTML = buttonTextContent.innerHTML === 'Скрыть' ?  'Читать далее': 'Скрыть';
-        buttonTextContent.classList.toggle('read-more--click');
-    })
+buttonBlockContent.addEventListener('click', function(event) {
+  event.preventDefault()
+  const hasClass = blockContent.matches('.content-height')
+  toggleClass('content-height', blockContent)
+  buttonBlockContent.textContent = hasClass ? 'Показать всё' : 'Скрыть'
+  toggleClass('read-more--click', buttonBlockContent)
+})
+
+
+buttonTextContent.addEventListener('click', function(event) {
+  event.preventDefault()
+  const hasClass = textContent.matches('.description__text--more')
+  toggleClass('description__text--more', textContent, descriptionTextFull, descriptionTextNext)
+  buttonTextContent.textContent = hasClass ? 'Читать далее' : 'Скрыть'
+  toggleClass('read-more--click', buttonTextContent)
+})

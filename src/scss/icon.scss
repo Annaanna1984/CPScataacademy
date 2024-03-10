@@ -1,27 +1,39 @@
 $var3: #FF3E79;
 .icon {
-  background: $var3;
+  display: inline-block;
   text-decoration: none;
-  border-radius: 100%;
   vertical-align: top;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+
   &:hover {
     opacity: 0.5;
+    transition: opacity 1s;
   }
+
   &--close {
     margin-left: 24px;
     padding: 10px 10px 10px 11px;
   }
+
   &--search {
     margin-left: 78px;
     padding: 10px 10px 10px 11px;
   }
+
+  &-contact {
+    display: flex;
+    list-style-type: none;
+    padding-left: 24px;
+  }
+
   &-contact__list {
     display: flex;
     list-style-type: none;
     padding-left: 24px;
   }
+
   &-contact__link {
     display: block;
     text-decoration: none;
@@ -39,24 +51,141 @@ $var3: #FF3E79;
 }
 .icon--search {
   display: block;
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 360px) {
     display: block;
-    margin-left:auto;
+    margin-left: auto;
   }
 }
+
 .icon--close {
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 360px) {
     display: block;
   }
 }
-.icon--close{
+
+.icon--close {
   @media screen and (min-width: 1120px) {
     display: none;
   }
 }
+
 .icon--search {
   @media screen and (min-width: 1120px) {
     margin-left: 130px;
   }
 }
 
+.icon-call {
+  background-image: url("/src/img/call.svg");
+}
+
+.icon-chat {
+  background-image: url("/src/img/chat.svg");
+}
+
+.icon-profile {
+  background-image: url("/src/img/profile.svg");
+}
+
+.icon-user-menu {
+  background-image: url("/src/img/repair.svg");
+}
+
+.icon-checkstatus {
+  background-image: url("/src/img/checkstatus.svg");
+}
+
+.icon-close {
+  background-image: url("/src/img/close.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: #FF3E79;
+  border-radius: 100%;
+}
+
+.icon-search {
+  background-image: url("/src/img/search.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: #FF3E79;
+  border-radius: 100%;
+}
+
+.icon-phone {
+  border: 0;
+  background-image: url("/src/img/call.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: #FF3E79;
+  border-radius: 100%;
+}
+
+.icon-feedback {
+  border: 0;
+  background-image: url("/src/img/chat.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: #FF3E79;
+  border-radius: 100%;
+}
+
+.icon-account {
+  background-image: url("/src/img/profile.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: #FF3E79;
+  border-radius: 100%;
+}
+
+.icon-menu {
+  background-image: url("/src/img/menu.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.icon--close {
+  border: 0;
+  margin-left: 24px;
+  padding: 10px 10px 10px 11px;
+}
+
+.icon--profile {
+  width: 20px;
+  height: 20px;
+  padding-right: 2px;
+}
+
+.icon--search {
+  display: block;
+}
+
+.icon-user-menu {
+  @media (min-width: 1120px) {
+    background: #FF3E79;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/src/img/repair.svg");
+  }
+}
+
+.icon-checkstatus {
+  @media (min-width: 1120px) {
+    background: #FF3E79;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/src/img/checkstatus.svg");
+  }
+
+}

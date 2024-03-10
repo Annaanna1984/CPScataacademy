@@ -1,7 +1,8 @@
-.btn--close{
+.btn-close {
   border: none;
   position: relative;
   bottom: 480px;
+  background-image: url("/src/img/close.svg");
   @media screen and (min-width: 512px) {
     position: fixed;
     top: 30px;

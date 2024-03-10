@@ -1,127 +1,98 @@
-const buttonMenu = document.querySelector('.button--menu');
-const sideBar = document.querySelector('.page__sidebar');
-const pageMain =  document.querySelector('.page--main');
-buttonMenu.addEventListener('click', function (){
-    sideBar.classList.add('modal--open');
-    pageMain.classList.add('main--opacity');
-    pageMain.classList.add('main-overflow-hidden');
-    pageMain.classList.remove('main-overflow-auto');
-})
-function sidebarClose() {
-    sideBar.classList.remove('modal--open');
-    pageMain.classList.remove('main--opacity');
-    pageMain.classList.remove('main-overflow-hidden');
-    pageMain.classList.add('main-overflow-auto');
-}
-function sidebarCloseClickOutside(e) {
-    if(sideBar.classList.contains('modal--open') && !e.target.matches('.page__sidebar, .page__sidebar *')) {
-        sidebarClose();
-    }
-}
-document.addEventListener('touchstart', sidebarCloseClickOutside);
-const iconClose = document.querySelector('.icon--close');
-iconClose.addEventListener('click', sidebarClose)
+const buttonMenu = document.querySelector('.header__button-menu')
+const pageMain = document.querySelector('.page--main')
 
+const sideBar = document.querySelector('.page__sidebar')
+const sidebarIconClose = document.querySelector('.icon-close')
 
-const buttonFeedback = document.querySelector('.icon-feedback');
-const feedback = document.querySelector('.feedback');
-const btnClose = document.querySelector('.btn--close');
-buttonFeedback.addEventListener('click', function (){
-    feedback.classList.add('modal--open');
-    pageMain.classList.add('main--opacity');
-    sideBar.classList.add('main--opacity');
-    pageMain.classList.add('main-overflow-hidden');
-    sideBar.classList.remove('modal--open');
-    pageMain.classList.remove('main-overflow-auto');
-})
-function feedbackClose() {
-    feedback.classList.remove('modal--open');
-    pageMain.classList.remove('main--opacity');
-    sideBar.classList.remove('main--opacity');
-    pageMain.classList.remove('main-overflow-hidden');
-    pageMain.classList.add('main-overflow-auto');
-}
-function feedbackCloseTouchOutside(e) {
-    if(feedback.classList.contains('modal--open') && !e.target.matches('.feedback, .feedback *')) {
-        feedbackClose();
-    }
-}
-document.addEventListener('touchstart', feedbackCloseTouchOutside);
-btnClose.addEventListener('click', feedbackClose)
+const buttonsFeedback = document.querySelectorAll('.icon-chat')
+const feedback = document.querySelector('.feedback')
+const feedbackIconClose = document.querySelector('.btn-close')
 
-
-const buttonCall = document.querySelector('.icon-call');
-const call = document.querySelector('.call');
-buttonCall.addEventListener('click', function (){
-    call.classList.add('modal--open');
-    pageMain.classList.add('main--opacity');
-    sideBar.classList.add('main--opacity');
-    pageMain.classList.add('main-overflow-hidden');
-    sideBar.classList.remove('modal--open');
-    pageMain.classList.remove('main-overflow-auto');
-    if (SidebarIconFeedback.classList.contains('modal--open')){
-        document.querySelector(".icon-feedback").disabled = true;
-    }
-})
-function callClose() {
-    call.classList.remove('modal--open');
-    pageMain.classList.remove('main--opacity');
-    sideBar.classList.remove('main--opacity');
-    pageMain.classList.remove('main-overflow-hidden');
-    pageMain.classList.add('main-overflow-auto');
-}
-function callCloseTouchOutside(e) {
-    if(call.classList.contains('modal--open') && !e.target.matches('.call, .call *')) {
-        callClose();
-    }
-}
-document.addEventListener('touchstart', callCloseTouchOutside);
-
-
+const buttonsCall = document.querySelectorAll('.icon-call')
+const call = document.querySelector('.call')
 const callIconClose = document.querySelector('.call__icon--close')
-callIconClose.addEventListener('click', callClose)
 
-const SidebarIconFeedback = document.querySelector('.sidebar__icon-feedback');
-SidebarIconFeedback.addEventListener('click', function (){
-    call.classList.remove('modal--open');
-    feedback.classList.add('modal--open');
-    pageMain.classList.add('main--opacity');
-    sideBar.classList.add('main--opacity');
-    pageMain.classList.add('main-overflow-hidden');
-    pageMain.classList.remove('main-overflow-auto');
-    sideBar.classList.remove('modal--open');
-})
+const closeIcons = document.querySelectorAll('.icon--close')
+const openModals = document.getElementsByClassName('modal--open')
 
-const SidebarIconCall = document.querySelector('.sidebar__icon-call');
-SidebarIconCall.addEventListener('click', function (){
-    feedback.classList.remove('modal--open');
-    call.classList.add('modal--open');
-    pageMain.classList.add('main--opacity');
-    sideBar.classList.add('main--opacity');
-    pageMain.classList.add('main-overflow-hidden');
-    pageMain.classList.remove('main-overflow-auto');
-    sideBar.classList.remove('modal--open');
-})
-
-function modalClickOutside(e){
-    if(!e.composedPath().includes(SidebarIconFeedback) && !e.composedPath().includes(SidebarIconCall)
-        && !e.composedPath().includes(buttonCall) && !e.composedPath().includes(buttonFeedback)
-        && !e.composedPath().includes(buttonMenu)){
-        callClose();
-        feedback.classList.remove('modal--open');
-        call.classList.remove('modal--open');
-        sideBar.classList.remove('modal--open');
-    }
+function toggleModal(element) {
+  console.log(`toggled ${element.className}`)
+  element.classList.toggle('modal--open')
+  console.log(openModals.length)
+  if (openModals.length < 2) {
+    pageMain.classList.toggle('main--opacity')
+    pageMain.classList.toggle('main-overflow-hidden')
+  }
+  if (element !== sideBar) {
+    sideBar.classList.add('main--opacity')
+  }
 }
-document.addEventListener('click', modalClickOutside);
+
+function closeModal(...elements) {
+  elements.forEach(e => e.classList.remove('modal--open'))
+}
+
+//sidebar
+buttonMenu.addEventListener('click', function(e) {
+  toggleModal(sideBar)
+  closeModal(feedback, call)
+  sideBar.classList.remove('main--opacity')
+  e.stopPropagation()
+})
+
+//feedback
+buttonsFeedback.forEach(b => b.addEventListener('click', function(e) {
+  toggleModal(feedback)
+  closeModal(sideBar, call)
+  e.stopPropagation()
+}))
+
+//call
+buttonsCall.forEach(b => b.addEventListener('click', function(e) {
+  toggleModal(call)
+  closeModal(sideBar, feedback)
+  e.stopPropagation()
+}))
+
+closeIcons.forEach(c => c.addEventListener('click', function(e) {
+  const target = e.currentTarget
+  switch (target) {
+    case sidebarIconClose: {
+      toggleModal(sideBar)
+      break
+    }
+    case feedbackIconClose : {
+      toggleModal(feedback)
+      break
+    }
+    case callIconClose : {
+      toggleModal(call)
+      break
+    }
+  }
+  sideBar.classList.remove('main--opacity')
+}))
+
+document.addEventListener('click', function(e) {
+  if (sideBar.matches('.modal--open') && !e.target.matches('.page__sidebar, .page__sidebar *')) {
+    toggleModal(sideBar)
+    sideBar.classList.remove('main--opacity')
+  }
+  if (feedback.matches('.modal--open') && !e.target.matches('.feedback, .feedback *')) {
+    toggleModal(feedback)
+    sideBar.classList.remove('main--opacity')
+  }
+  if (call.matches('.modal--open') && !e.target.matches('.call, .call *')) {
+    toggleModal(call)
+    sideBar.classList.remove('main--opacity')
+  }
+})
 
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        feedback.classList.remove('modal--open');
-        call.classList.remove('modal--open');
-        sideBar.classList.remove('modal--open');
-        pageMain.classList.remove('main-overflow-hidden');
-        pageMain.classList.remove('main--opacity');
-        sideBar.classList.remove('main--opacity');
-    }
-});
+  if (e.key === 'Escape') {
+    closeModal(sideBar, call, feedback)
+    pageMain.classList.remove('main-overflow-hidden')
+    pageMain.classList.remove('main--opacity')
+    sideBar.classList.remove('main--opacity')
+  }
+})

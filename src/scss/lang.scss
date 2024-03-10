@@ -4,16 +4,22 @@ $var8: #7E7E82;
   display: flex;
   list-style-type: none;
   padding-left: 24px;
-  margin-bottom: 32px;
+
+  &--position {
+    margin-bottom: 32px;
+  }
+
   &__link {
     display: block;
     text-decoration: none;
     margin-right: 7px;
   }
+
   &__item {
     text-decoration: none;
     color: $var6;
     margin-right: 7px;
+
     &:hover {
       color: $var8;
     }
