@@ -259,7 +259,7 @@
         </li>
       </ul>
       <div class="swiper-pagination"></div>
-      <a class="read-more more-block" href="#" >Показать все</a>
+      <button class='read-more more-block' href='#'>Показать все</button>
     </section>
     <section class="price swiper">
       <h3 class='section-title'>Цены на услуги</h3>
@@ -321,13 +321,16 @@
     <h2 class='modal__title main-title modal__title--divider'>Обратная связь</h2>
     <form class='form modal__form' action='http://echo.htmlacademy.ru'>
       <label>
-        <input class='form__input' name='feedback-name' type='text' placeholder='Имя'>
+        <input class='form__input' name='feedback-name' type='text' placeholder='Имя'
+               pattern='^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$'>
       </label>
       <label>
-        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'>
+        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'
+               pattern='^\(\d{3}\)\d{3}-\d{2}-\d{2}$'>
       </label>
       <label>
-        <input class='form__input' name='feedback-email' type='email' placeholder='Электронная почта'>
+        <input class='form__input' name='feedback-email' type='email' placeholder='Электронная почта'
+               pattern='/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$'>
       </label>
       <label>
         <textarea class='form__input' name='feedback-message' placeholder='Сообщение'></textarea>
@@ -336,7 +339,7 @@
         Нажимая “отправить”, вы даете согласие на <a class='form__link' href='#'>обработку персональных данных</a> и
         соглашаетесь с нашей <a class='form__link' href='#'>политикой конфиденциальности</a>
       </p>
-      <a class='order-btn modal__form--button' type='submit'>Отправить</a>
+      <button class='order-btn modal__form--button'>Отправить</button>
     </form>
     <button class='btn-close icon icon--close feedback__icon--close' type='button'>
     </button>
@@ -345,13 +348,14 @@
     <h2 class='modal__title main-title modal__title--divider'>Заказать звонок </h2>
     <form class='form modal__form' action='http://echo.htmlacademy.ru'>
       <label>
-        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'>
+        <input class='form__input' name='feedback-telephone' type='tel' placeholder='Телефон'
+               pattern='^\(\d{3}\)\d{3}-\d{2}-\d{2}$'>
       </label>
       <p class='form__text'>
         Нажимая “отправить”, вы даете согласие на <a class='form__link' href='#'>обработку персональных данных</a> и
         соглашаетесь с нашей <a class='form__link' href='#'>политикой конфиденциальности</a>
       </p>
-      <a class='order-btn modal__form--button' type='submit'>Отправить</a>
+      <button class='order-btn modal__form--button'>Отправить</button>
     </form>
     <button class='btn-close icon icon--close call__icon--close' type='button'>
     </button>

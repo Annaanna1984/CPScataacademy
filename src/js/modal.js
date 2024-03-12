@@ -16,9 +16,7 @@ const closeIcons = document.querySelectorAll('.icon--close')
 const openModals = document.getElementsByClassName('modal--open')
 
 function toggleModal(element) {
-  console.log(`toggled ${element.className}`)
   element.classList.toggle('modal--open')
-  console.log(openModals.length)
   if (openModals.length < 2) {
     pageMain.classList.toggle('main--opacity')
     pageMain.classList.toggle('main-overflow-hidden')
@@ -41,20 +39,20 @@ buttonMenu.addEventListener('click', function(e) {
 })
 
 //feedback
-buttonsFeedback.forEach(b => b.addEventListener('click', function(e) {
+buttonsFeedback.forEach(el => el.addEventListener('click', function(e) {
   toggleModal(feedback)
   closeModal(sideBar, call)
   e.stopPropagation()
 }))
 
 //call
-buttonsCall.forEach(b => b.addEventListener('click', function(e) {
+buttonsCall.forEach(el => el.addEventListener('click', function(e) {
   toggleModal(call)
   closeModal(sideBar, feedback)
   e.stopPropagation()
 }))
 
-closeIcons.forEach(c => c.addEventListener('click', function(e) {
+closeIcons.forEach(el => el.addEventListener('click', function(e) {
   const target = e.currentTarget
   switch (target) {
     case sidebarIconClose: {
