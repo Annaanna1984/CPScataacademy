@@ -11,8 +11,7 @@ function toggleClass(toggleClass, ...elementArr) {
   elementArr.forEach(e => e.classList.toggle(toggleClass))
 }
 
-button.addEventListener('click', function(event) {
-  event.preventDefault()
+button.addEventListener('click', function() {
   const hasClass = content.matches('.content-height')
   toggleClass('content-height', content)
   button.textContent = hasClass ? 'Показать всё' : 'Скрыть'
@@ -20,8 +19,7 @@ button.addEventListener('click', function(event) {
 })
 
 
-buttonBlockContent.addEventListener('click', function(event) {
-  event.preventDefault()
+buttonBlockContent.addEventListener('click', function() {
   const hasClass = blockContent.matches('.content-height')
   toggleClass('content-height', blockContent)
   buttonBlockContent.textContent = hasClass ? 'Показать всё' : 'Скрыть'
@@ -29,8 +27,7 @@ buttonBlockContent.addEventListener('click', function(event) {
 })
 
 
-buttonTextContent.addEventListener('click', function(event) {
-  event.preventDefault()
+buttonTextContent.addEventListener('click', function() {
   const hasClass = textContent.matches('.description__text--more')
   toggleClass('description__text--more', textContent, descriptionTextFull, descriptionTextNext)
   buttonTextContent.textContent = hasClass ? 'Читать далее' : 'Скрыть'
